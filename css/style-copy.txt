@@ -1,0 +1,403 @@
+* header h1 {
+    /* border: 1px solid; */
+    display: inline-block;
+    /* float: left; */
+    padding: 14px 24px;
+    text-transform: uppercase; /* agar menjadi kapital semua */
+    
+    
+}
+
+/*header ul */
+header ul {
+    /* border: 1px solid; */
+    /* float: right; */
+     /* agar ul berada di posisi kanan */
+}
+
+/* header untuk navigasi ul li */
+header ul li {
+    /* border: 1px solid; */
+    /* padding: 24px; */
+    /* display: inline-block; */
+     /* agar sebaris menyamping dan tinggi lebarnya bisa di atur */
+    
+} */
+
+
+/* semua tag a */
+a {
+    text-decoration: none; /* menghilangkan garis bawah */
+    transition: .3s; /* memberikan efek pada tag a ketika cursor mengarahkan pada element berwarna dengan slow */
+}
+
+/* tag link agar di sentuh berwarna menggunakan pseudo class :hover 
+class :hover = mengubah bentuk ketika cursor di arahkan pada element tersebut
+*/
+a:hover { 
+    color: var(--text-color);
+}
+
+/* container */
+.container {
+    /* width: 90%; */
+    /* margin: 0 auto; */
+    /* border: 1px solid; */
+}
+
+/* untuk menghilangkan float , agar containernya mengikuti isinya 
+menggunakan clear : both
+*/
+.container::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+/* mobile-menu */
+ .mobile-menu {
+    
+    float: right;
+    display: none; /* agar ketika posisi tampilan berada di perbesar tidak tampil/ di hilangkan */
+    padding: 18px;
+    /* border: 1px solid; */
+ }  
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: var(--first-color-alt);
+    margin: 6px 0;
+    transition: 0.4s;
+    
+  }
+/* untuk merubah bentuk bar menjadi x */
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+  
+.change .bar2 {opacity: 0;}
+  
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+
+/* menggunakan pseudo class hover kita merubah ketika di sentuh cursor y berubah menjadi pointer */
+.mobile-menu:hover {
+    cursor: pointer; /* ketika di sentuh cursor y berubah menjadi pointer */
+}
+/* menyembunyikan cekboxnya */
+/* #check {
+    display: none;
+} */
+
+.sidebar {
+    height: 100%;
+    position: fixed; /* akan memiliki sifat tetap. tanpa ada perubahan bahkan jika halaman website di scroll. */
+   /* z-index: 1; */
+    float: right;
+    top: 73px; /* agar element nempel ke atas */
+    /* bottom: 0; agar element nempel ke bawah */
+    right: 0; /* agar element ke arah kanan tak terlihat bukan berarti menghilang */
+    width: 0;
+    overflow: hidden;
+    background-color: var(--side-bar-color); /* .9 adalah opacity agar teransparan */
+    transition: .3s;
+}
+
+.menu__sidebar {
+    list-style-type: none; 
+    text-decoration: none; 
+    display: grid;
+    justify-items: stretch;
+    /* color: thistle; */
+    /* border: 1px solid;  */
+}
+
+.nav__item{
+    height: 60px;
+    /* margin: 1rem 0; */
+    /* border: 1px solid;  */
+    display: grid;
+    justify-items: center;
+    transition: .3s;
+    cursor: pointer;
+    /* color: white; */
+}
+
+.nav__item:hover{
+    
+    background-color: var(--side-bar-color-hover) ;
+}
+
+.nav__link{
+    place-self: center;
+    color: white;
+}
+
+
+
+/* .sidebar ul li {
+    padding: 24px;
+    /* border: 1px solid; */
+    /* transition: .3s; agar ketika cursor mengarah ke menu perubahan warna menjadi slow */
+    /* transition-property: background-color; */
+    /* color: var(--container-color); */
+/* }  */
+
+
+
+/* #check:checked saat id "check" ini di cek/di klik pada icon bars maka semua elemet sidebar itu rightnya 0 atau muncul */
+/* #check:checked ~ .sidebar {
+    right: 0;
+} */
+
+
+
+/* __ Isi Content / Banner */
+/* section */
+
+/* banner */
+section.banner {
+ background-color: var(--section-color);
+}
+
+/* img / foto */
+.banner img {
+    width: 200px;
+    float: right;
+    margin: 60px 100px 0 0;
+    border-radius: 20px;
+}
+
+/* teks di dalam class benner */
+.banner h2 {
+    color: var(--first-color);
+    /* margin: 60px 100px 0 0; */
+    padding-top: 60px;
+}
+
+.banner p {
+    color: var(--first-color);
+}
+
+
+
+/* about */
+section h3 {
+    /* border: 1px solid; */
+    padding-bottom: 20px ;
+    /* position: relative; */
+    text-align: center;
+    margin: 20px 0;
+}
+
+section#about p {
+    text-align: justify; /* membuat rata tengah */
+    text-indent: 30px; /* untuk membuat paragraf / jarak paragraf */
+    line-height: 25px; /* membuat tinggi baris sebuah teks/paragraf */
+    margin-bottom: 15px;
+}
+
+/* skill */
+section#skills {
+    background: var(--section-color-alt);
+}
+
+section#skills h4 {
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    
+}
+
+section#skills .progress {
+    /* border: 1px solid; */
+    background: #d8d8d8;
+    border-radius: 25px;
+    /* padding: 5px 0; */
+}
+
+
+.progress-done {
+    background: linear-gradient(to left, #236ECC, #7EAFEE);
+    border-radius: 25px;
+    box-shadow: 0 3px 3px -5px #84B5F3, 0 2px 5px #84B5F3;
+    text-align: center;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    padding: 3px 0;
+    height: 100%;
+	width: 0;
+	opacity: 0;
+	transition: 1s ease 0.3s;
+}
+
+
+
+/* @media = ketika tampilan lebarnya max 768px /  tampilan menjadi mobile 
+maka tampilkan icon bar pada class mobile-menu dan hilangkan menu pada ul 
+*/
+@media (max-width: 768px){
+    /* menampilkan icon bar ketika pada device mobile */
+    .mobile-menu {
+        display: block;
+        margin-right: 12px;
+    }
+    
+    /* menghilangkan menu ul ketika pada device mobile */
+    header ul {
+        display: none;
+        
+    }
+
+    
+    
+
+    .banner{
+        height: 100vh;
+        border: 1px solid;
+        display: grid;
+        align-content: center;
+    }
+
+    .banner img {
+        margin: 40px 61px;
+    }
+
+    .about__content{
+        height: 100vh;
+        display: grid;
+        /* align-content: center; */
+
+    }
+
+    .content{
+        height: 100vh;
+        border: 1px solid;
+        display: grid;
+    }
+
+    .about__container{
+        /* border: 1px solid; */
+        place-self: center;
+        width: 90%;
+
+        
+    }
+
+    .skills__container{
+        /* height: calc(100vh - 70px); */
+        border: 1px solid;
+        /* justify-self: center; */
+        place-self: center;
+        /* align-content: center; */
+        margin: auto 0;
+        width: 90%;
+
+    }
+
+    .change-theme{
+        cursor: pointer;
+    }
+
+
+
+}
+/* ketika tampilan lebarnya min 768px maka sidebar akan menghilang dan menampilkan navbar */
+@media (min-width: 768px){
+    .sidebar{
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Bagian Benner
+    <section class="banner" id="home">
+        <div class="container">
+            <img src="img/my_photo.jpg" alt="">
+            <h2>Hai.... <br>
+                Saya adalah seorang <span class="efek-ngetik"></span></h2>
+            <p>Selamat datang di website Portfolio saya!</p>
+        </div>
+    </section>
+
+    <!-- Bagian About-->
+    <section class="about__content" id="about">
+        <div class="about__container bd-container">
+            <h3>About</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis aspernatur, possimus
+                exercitationem vel distinctio inventore temporibus sequi laboriosam, itaque esse sed eaque est hic
+                accusantium accusamus deleniti ipsam, rerum iusto?</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis aspernatur, possimus
+                exercitationem vel distinctio inventore temporibus sequi laboriosam, itaque esse sed eaque est hic
+                accusantium accusamus deleniti ipsam, rerum iusto?</p>
+        </div>
+    </section>
+
+
+    <!-- Bagian Skill-->
+    <section class="content" id="skills">
+        <div class="skills__container bd-container">
+            <h3>Skills</h3>
+            <h4>html</h4>
+            <div class="progress">
+                <div class="progress-done" data-done="70">
+                    70%
+                </div>
+            </div>
+            <h3>Skills</h3>
+            <h4>html</h4>
+            <div class="progress">
+                <div class="progress-done" data-done="70">
+                    70%
+                </div>
+            </div>
+            <h3>Skills</h3>
+            <h4>html</h4>
+            <div class="progress">
+                <div class="progress-done" data-done="70">
+                    70%
+                </div>
+            </div>
+
+
+
+        </div>
+    </section>
+
+    <section id="portfolio">
+        <div class="container bd-container">
+            <h3>About</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis aspernatur, possimus
+                exercitationem vel distinctio inventore temporibus sequi laboriosam, itaque esse sed eaque est hic
+                accusantium accusamus deleniti ipsam, rerum iusto?</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis aspernatur, possimus
+                exercitationem vel distinctio inventore temporibus sequi laboriosam, itaque esse sed eaque est hic
+                accusantium accusamus deleniti ipsam, rerum iusto?</p>
+        </div>
+    </section>
+
+
