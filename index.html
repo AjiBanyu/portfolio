@@ -4,6 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--==================== UNICONS ====================-->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
     <link rel="stylesheet" href="css/style.css">
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
 
@@ -16,28 +20,15 @@
 
 <body>
 
-    <!-- sidebar -->
-    <!-- id= check terhubung pada for=check di label ,harus sama nilainya agar bisa di klik-->
-    <!-- <input type="checkbox" id="check"> -->
-    <!-- <div id="mySidebar" class="sidebar">
-        <ul class="menu__sidebar">
-            <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
-            <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
-            <li class="nav__item"><a href="#portfolio" class="nav__link">Portfolio</a></li>
-            <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
-            <li class="nav__item"><i class="bx bx-moon change-theme nav__link" class="" id="button-theme"></i></li>
-        </ul>
-    </div> -->
-
     <!-- Bagian Header-->
     <header class="l-header">
-        <nav class="nav">
+        <nav class="nav container">
             <div class="logo">
                 <h3>PAMUNGKAS</h3>
             </div>
 
-            <div class="nav-menu">
-                <ul class="nav__list">
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list" id="nav-list">
                     <li class="nav__item"><a href="#" class="nav__link">About</a> </li>
                     <li class="nav__item"><a href="#" class="nav__link">Skills</a></li>
                     <li class="nav__item"><a href="#" class="nav__link">Portfolio</a></li>
@@ -46,20 +37,20 @@
 
             </div>
 
-            <div class="nav-toggle">
-                <input type="checkbox" class="nav__input">
-                <span></span>
-                <span></span>
-                <span></span>
+            <div class="nav__input" id="nav-input">
+                <!-- <input type="checkbox" class="nav__input" id="nav-input"> -->
+                <i class="uil uil-bars"></i>
             </div>
         </nav>
     </header>
     <!-- Tutup Header-->
 
+    <!-- HOME -->
+
 
 
 </body>
-<script src="js/script2.js"></script>
+<script src="js/script.js"></script>
 
 <script>
 

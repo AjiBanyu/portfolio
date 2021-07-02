@@ -1,103 +1,96 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap");
 
-
-
 /* ======== BASE DASAR =========== */
-*{
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-    /* padding: 0; */
-    margin: 3rem 0 0 0;
-    font-family: "Poppins", sans-serif;
+  /* padding: 0; */
+  margin: 3rem 0 0 0;
+  font-family: "Poppins", sans-serif;
 }
 
-a{
-    text-decoration: none;
-    color: black;
+a {
+  text-decoration: none;
+  color: black;
 }
 
-/* ========== HEADER ========== */
+ul {
+  list-style: none;
+}
+
+/* ========== LAYOUT ========== */
+.container {
+  max-width: 760px;
+  margin-right: 1.5rem;
+  margin-left: 1.5rem;
+  border: 1px solid;
+}
+
 .l-header {
-    /* border: 1px solid; */
-    /* display: flex; */
-    width: 100%;
-    top: 0;
-    left: 0;
-    position: fixed;
-    z-index: 1000;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background-color: #f8af2d;
+  z-index: 100;
+  border: 1px solid;
 }
 
+/* ========= NAV ======= */
 .nav {
-    /* border: 1px solid; */
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: #dbe6fd;
-}
-
-.nav__list{
-    display: flex;
-    list-style: none;
-    /* width: 35%; */
-    justify-content: space-between;
-}
-
-.nav__item{
-    margin-left: 40px; 
-}
-
-.nav__link:hover{
-    color: #fcf1f1;
-}
-
-.nav-toggle{
-    display: none;
-    height: 20px;
-    flex-direction: column;
-    justify-content: space-between;
-    position: relative;
-}
-
-span{
-    /* border: 1px solid; */
-    display: block;
-    width: 28px;
-    height: 5px;
-    background-color: #f4abc4;
-    border-radius: 5px;
-}
-
-.nav__input{
-    /* border: 1px solid; */
-    position: absolute;
-    width: 50px;
-    height: 21px;
-    left: -14px;
-    top: -4px;
-    z-index: 2;
-
-    opacity: 0;
-    cursor: pointer;
+  max-width: 1024px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 3rem;
 }
 
 @media screen and (max-width: 768px) {
-    .nav__list{
-        position: absolute;
-    
+  .nav__menu {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    /* height: 100px; */
+    width: 100%;
+    /* padding: 1.5rem 0 1rem; */
+    text-align: center; /* text berada di tengah */
+    background-color: var(--body-color);
+    transition: 0.4s; /* efek transisi */
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1); /* untuk membubat bayangan pada nav menu */
+    border-radius: 0 0 1rem 1rem; /* membuat lekukan pada ujung kotak nav */
+    z-index: var(--z-fixed);
+  }
+}
 
-    }
+.nav__item {
+  margin-bottom: 1.5rem;
+}
 
-    .nav-toggle{
-        display: flex;
-    }
+.logo,
+.nav__link,
+.nav__input {
+  color: #b26700;
+  font-weight: 400;
+}
 
-    .nav__list .nav__slide{
-        opacity: 1;
-        transform: translateX(
-            0
-        );
-    }
+.nav__input {
+  font-size: 2.5rem;
+}
+
+.nav__link {
+  transition: 0.2s;
+}
+
+.nav__link:hover,
+.logo:hover {
+  color: #161032;
+}
+
+.show__menu {
+  top: 3rem;
 }
