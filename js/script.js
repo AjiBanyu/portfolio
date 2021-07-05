@@ -14,7 +14,15 @@ const showMenu = (toggleId, navId) =>{
 }
 showMenu('nav-input','nav-menu')
 
+const navLink = document.querySelectorAll('.nav__link');
 
+function linkAction(){
+    const navMenu = document.getElementById('nav-menu');
+
+    navMenu.classList.remove('show__menu');
+}
+
+navLink.forEach(n => n.addEventListener('click', linkAction))
  // untuk sidebar animation X
 
 // var toggled = false;

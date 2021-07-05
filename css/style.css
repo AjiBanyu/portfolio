@@ -24,21 +24,48 @@ ul {
   list-style: none;
 }
 
+/* ======== SECTION ======== */
+.section {
+  padding: 2.5rem 0 4rem;
+}
+
+.section__title {
+  font-size: 20px;
+}
+
+.section__subtitle {
+  font-size: 1.125rem;
+  color: hsl(250, 8%, 65%);
+  margin-bottom: 3rem;
+}
+
+.section__title,
+.section__subtitle {
+  text-align: center;
+  /* margin: 0; */
+}
+
 /* ========== LAYOUT ========== */
 .container {
   max-width: 760px;
   margin-right: 1.5rem;
   margin-left: 1.5rem;
-  border: 1px solid;
+  /* border: 1px solid; */
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
 }
 
 .l-header {
   width: 100%;
   position: fixed;
   top: 0;
-  background-color: #f8af2d;
+  /* background-color: #f8af2d; */
+  background-color: #f8f3ea;
   z-index: 100;
-  border: 1px solid;
+  /* border: 1px solid; */
 }
 
 /* ========= NAV ======= */
@@ -59,7 +86,8 @@ ul {
     width: 100%;
     /* padding: 1.5rem 0 1rem; */
     text-align: center; /* text berada di tengah */
-    background-color: var(--body-color);
+    background-color: #f8f3ea;
+
     transition: 0.4s; /* efek transisi */
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1); /* untuk membubat bayangan pada nav menu */
     border-radius: 0 0 1rem 1rem; /* membuat lekukan pada ujung kotak nav */
@@ -93,4 +121,77 @@ ul {
 
 .show__menu {
   top: 3rem;
+}
+
+/* ============ HOME ========== */
+.home__container {
+  gap: 1rem;
+}
+
+.home__content {
+  grid-template-columns: 1fr;
+  padding-top: 3.5rem;
+  align-items: center;
+}
+
+.home__blob {
+  width: 200px;
+  fill: #161032;
+}
+
+.home__img {
+  place-self: center;
+}
+
+.home__blob-img {
+  width: 400px;
+}
+
+.home__data {
+  grid-column: 1/2;
+  padding: 10px 0;
+}
+
+.home__title {
+  font-size: 32px;
+  margin-bottom: 0;
+}
+
+.home__subtitle {
+  font-size: 1.125rem;
+  color: hsl(250, 8%, 65%);
+  font-weight: 500;
+  margin: 0 0 0.75rem 0;
+}
+
+/* ======= BUTTON ======= */
+.button {
+  display: inline-block;
+  /* border: 1px solid; */
+  background-color: hsl(250, 69%, 61%);
+  color: #fff;
+  border-radius: 10px;
+  padding: 12px;
+  /* margin-bottom: 2rem;s */
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+.button:hover {
+  background-color: hsl(250, 57%, 53%);
+}
+
+.button-icon {
+  font-size: 1.25rem;
+  padding-left: 5px;
+}
+
+/* =========== ABOUT ========= */
+.about__img {
+  width: 200px;
+  border-radius: 10px;
+  place-self: center;
+}
+
+.about__description {
+  text-align: center;
 }
